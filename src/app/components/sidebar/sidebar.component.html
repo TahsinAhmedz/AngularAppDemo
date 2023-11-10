@@ -1,10 +1,12 @@
 
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <li>Home</li>
-    <li>Services</li>
-    <li>About</li>
-    <li>Contact</li>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <mat-nav-list role="list">
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item>Services</a>
+      <a mat-list-item routerLink="/about">About</a>
+      <a mat-list-item>Contact</a>
+    </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { DynamicContentComponent } from './components/dynamic-content/dynamic-content.component';
 import { AboutComponent } from './components/about/about.component';
+import {MatListModule} from '@angular/material/list';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,15 +24,19 @@ import { AboutComponent } from './components/about/about.component';
     SidebarComponent,
     MainContentComponent,
     DynamicContentComponent,
-    AboutComponent
+    AboutComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     MatToolbarModule,
     MatSidenavModule,
     ScrollingModule,
+    MatListModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
