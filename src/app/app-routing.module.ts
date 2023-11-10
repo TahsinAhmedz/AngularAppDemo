@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 
@@ -11,7 +12,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'about',
-    component: MainContentComponent,
+    component: AboutComponent,
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
 ];

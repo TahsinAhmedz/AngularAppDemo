@@ -11,6 +11,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { DynamicContentComponent } from './components/dynamic-content/dynamic-content.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DynamicContentComponent } from './components/dynamic-content/dynamic-co
     HeaderComponent,
     SidebarComponent,
     MainContentComponent,
-    DynamicContentComponent
+    DynamicContentComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
