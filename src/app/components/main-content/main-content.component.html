@@ -1,1 +1,8 @@
-<p>main-content works!</p>
+<div>
+  <ng-container *ngComponentOutlet="
+  currentData.component;
+  inputs: currentData.inputs;
+" />
+<button (click)="displayNextData()">Next</button>
+
+</div>
