@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,14 @@ export class LocationService {
 
   getLocations(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
+  }
+
+  getObjectById(slug: string): Observable<any> {
+    console.log(slug);
+    return this.http.get<any[]>(this.apiUrl)
+      .pipe(
+        map(objects => objects.find(obj => obj.slug === slug)),
+        tap(x => console.log(slug, x))
+      );
   }
 }

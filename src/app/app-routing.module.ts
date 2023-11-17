@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { AboutComponent } from './components/about/about.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -14,6 +15,17 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent,
   },
+  {
+    path: 'details/:slug',
+    component: DetailsComponent,
+    children: [
+      {
+        path: ':childSlug',
+        component: DetailsComponent
+      }
+    ]
+  },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
 ];
 

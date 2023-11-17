@@ -16,6 +16,7 @@ import { AboutComponent } from './components/about/about.component';
 import {MatListModule} from '@angular/material/list';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     MainContentComponent,
     DynamicContentComponent,
     AboutComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
