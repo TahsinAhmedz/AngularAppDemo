@@ -1,10 +1,217 @@
 [
   {
-    "route": "/home",
-    "name": "Home"
+    "id": "1",
+    "title": "Introduction to JavaScript",
+    "details": "Learn the basics of JavaScript programming.",
+    "tags": ["javascript", "programming", "Basic"],
+    "slug": "introduction-to-javascript"
   },
   {
-    "route": "/about",
-    "name": "About"
+    "id": "2",
+    "title": "Object-Oriented Programming in Java",
+    "details": "Explore the principles of OOP using Java.",
+    "tags": ["java", "programming", "OOP"],
+    "slug": "oop-in-java"
+  },
+  {
+    "id": "3",
+    "title": "HTML5 and CSS3 Fundamentals",
+    "details": "Master the essentials of modern web development.",
+    "tags": ["html5", "css3", "web", "Basic"],
+    "slug": "html5-css3-fundamentals"
+  },
+  {
+    "id": "4",
+    "title": "Python for Data Science",
+    "details": "An introduction to using Python for data analysis.",
+    "tags": ["python", "data science", "Basic"],
+    "slug": "python-for-data-science"
+  },
+  {
+    "id": "5",
+    "title": "Responsive Web Design with Bootstrap",
+    "details": "Create responsive and mobile-first web pages.",
+    "tags": ["bootstrap", "web design", "Basic"],
+    "slug": "responsive-web-design"
+  },
+  {
+    "id": "6",
+    "title": "Introduction to React.js",
+    "details": "Learn the fundamentals of building UIs with React.",
+    "tags": ["react.js", "javascript", "Basic"],
+    "slug": "introduction-to-react"
+  },
+  {
+    "id": "7",
+    "title": "Node.js and Express.js",
+    "details": "Building scalable web applications with Node and Express.",
+    "tags": ["node.js", "express.js", "web development"],
+    "slug": "node-express"
+  },
+  {
+    "id": "8",
+    "title": "Databases with MongoDB",
+    "details": "Explore NoSQL databases using MongoDB.",
+    "tags": ["mongodb", "database", "NoSQL"],
+    "slug": "mongodb-databases"
+  },
+  {
+    "id": "9",
+    "title": "Introduction to Angular",
+    "details": "As a platform, Angular includes...",
+    "tags": ["angular", "Basic"],
+    "slug": "introduction-to-angular",
+    "child": [
+      {
+        "id": "10",
+        "title": "Angular 2 Basics",
+        "details": "As a platform, Angular includes 2...",
+        "tags": ["angular", "Basic"],
+        "slug": "angular-2-basics"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Swift Programming for iOS",
+    "details": "Develop iOS applications using Swift.",
+    "tags": ["swift", "iOS", "programming"],
+    "slug": "swift-programming-for-ios"
+  },
+  {
+    "id": "12",
+    "title": "Introduction to Machine Learning",
+    "details": "An overview of machine learning concepts.",
+    "tags": ["machine learning", "data science"],
+    "slug": "introduction-to-machine-learning"
+  },
+  {
+    "id": "13",
+    "title": "Cybersecurity Fundamentals",
+    "details": "Basic principles and practices of cybersecurity.",
+    "tags": ["cybersecurity", "security"],
+    "slug": "cybersecurity-fundamentals"
+  },
+  {
+    "id": "14",
+    "title": "RESTful API Design with Flask",
+    "details": "Building RESTful APIs using the Flask framework.",
+    "tags": ["flask", "api", "web development"],
+    "slug": "restful-api-design"
+  },
+  {
+    "id": "15",
+    "title": "Data Structures in C++",
+    "details": "Explore common data structures using C++.",
+    "tags": ["c++", "programming", "data structures"],
+    "slug": "data-structures-c++"
+  },
+  {
+    "id": "16",
+    "title": "Introduction to Vue.js",
+    "details": "Building interactive user interfaces with Vue.js.",
+    "tags": ["vue.js", "javascript", "web development"],
+    "slug": "introduction-to-vue"
+  },
+  {
+    "id": "17",
+    "title": "Network Security Essentials",
+    "details": "Fundamental concepts of network security.",
+    "tags": ["network security", "security"],
+    "slug": "network-security-essentials"
+  },
+  {
+    "id": "18",
+    "title": "Android App Development with Kotlin",
+    "details": "Building Android applications using Kotlin.",
+    "tags": ["android", "kotlin", "mobile development"],
+    "slug": "android-app-development"
+  },
+  {
+    "id": "19",
+    "title": "Advanced JavaScript Techniques",
+    "details": "Explore advanced features and techniques in JavaScript.",
+    "tags": ["javascript", "programming", "advanced"],
+    "slug": "advanced-javascript-techniques"
+  },
+  {
+    "id": "20",
+    "title": "Database Administration with SQL Server",
+    "details": "Managing databases using Microsoft SQL Server.",
+    "tags": ["sql server", "database", "administration"],
+    "slug": "database-administration-sql-server"
+  },
+  {
+    "id": "21",
+    "title": "Introduction to DevOps",
+    "details": "Understanding the principles of DevOps.",
+    "tags": ["devops", "software development"],
+    "slug": "introduction-to-devops"
+  },
+  {
+    "id": "22",
+    "title": "Python Web Development with Django",
+    "details": "Building web applications using Django framework.",
+    "tags": ["python", "django", "web development"],
+    "slug": "python-web-development-django"
+  },
+  {
+    "id": "23",
+    "title": "Game Development with Unity",
+    "details": "Creating games using the Unity game engine.",
+    "tags": ["unity", "game development"],
+    "slug": "game-development-unity"
+  },
+  {
+    "id": "24",
+    "title": "Introduction to Cloud Computing",
+    "details": "Understanding the basics of cloud computing.",
+    "tags": ["cloud computing", "technology"],
+    "slug": "introduction-to-cloud-computing"
+  },
+  {
+    "id": "25",
+    "title": "Frontend Development with Angular",
+    "details": "Building modern web applications with Angular.",
+    "tags": ["angular", "web development"],
+    "slug": "frontend-development-angular",
+    "child": [
+      {
+        "id": "26",
+        "title": "Angular Components",
+        "details": "Understanding the component-based architecture in Angular.",
+        "tags": ["angular", "web development"],
+        "slug": "angular-components"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Java Spring Framework",
+    "details": "Building Java applications using the Spring framework.",
+    "tags": ["java", "spring", "web development"],
+    "slug": "java-spring-framework"
+  },
+  {
+    "id": "28",
+    "title": "Mobile App Design Principles",
+    "details": "Essential principles for designing mobile applications.",
+    "tags": ["design", "mobile app", "UX"],
+    "slug": "mobile-app-design-principles"
+  },
+  {
+    "id": "29",
+    "title": "Data Visualization with D3.js",
+    "details": "Creating interactive data visualizations with D3.js.",
+    "tags": ["d3.js", "data visualization", "web development"],
+    "slug": "data-visualization-d3js"
+  },
+  {
+    "id": "30",
+    "title": "Advanced Python Programming",
+    "details": "Exploring advanced concepts in Python programming.",
+    "tags": ["python", "programming", "advanced"],
+    "slug": "advanced-python-programming"
   }
 ]
+

@@ -2,6 +2,8 @@
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side" opened>
     <mat-nav-list role="list">
+
+      <a mat-list-item *ngFor="let item of list" [routerLink]="item.slug">{{item.title}}</a>
       <a mat-list-item routerLink="/home">Home</a>
       <a mat-list-item>Services</a>
       <a mat-list-item routerLink="/about">About</a>

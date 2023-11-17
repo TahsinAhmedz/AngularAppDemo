@@ -1,18 +1,18 @@
 <header>
   <mat-toolbar>
-    <span>My Application</span>
+    <h1>Application Demo</h1>
 
-
-    <div>
+    <div class="search-container" style="margin-left: auto;">
       <input type="text" [(ngModel)]="searchTerm" placeholder="Search locations">
+
+      <ul *ngIf="searchTerm" class="search-results">
+        <li *ngFor="let location of locations | searchFilter: searchTerm">
+          <a [routerLink]="location.route">
+            {{ location.name }}
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <ul *ngIf="searchTerm">
-      <li *ngFor="let location of locations | searchFilter: searchTerm">
-        <a [routerLink]="location.route">
-          {{ location.name }}
-        </a>
-      </li>
-    </ul>
   </mat-toolbar>
 </header>
