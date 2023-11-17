@@ -2,16 +2,25 @@
   <mat-toolbar>
     <h1>Application Demo</h1>
 
-    <div class="search-container" style="margin-left: auto;">
-      <input type="text" [(ngModel)]="searchTerm" placeholder="Search locations">
+    <div class="search-container">
 
-      <ul *ngIf="searchTerm" class="search-results">
-        <li *ngFor="let location of locations | searchFilter: searchTerm">
-          <a [routerLink]="location.route">
-            {{ location.name }}
-          </a>
-        </li>
-      </ul>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Search</mat-label>
+          <input type="text"
+                 placeholder="Search Page"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option.title}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
     </div>
 
   </mat-toolbar>

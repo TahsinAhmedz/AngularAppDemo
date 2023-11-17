@@ -8,6 +8,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +18,7 @@ import { DynamicContentComponent } from './components/dynamic-content/dynamic-co
 import { AboutComponent } from './components/about/about.component';
 import {MatListModule} from '@angular/material/list';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
-import { FormsModule } from '@angular/forms';
+import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
@@ -38,7 +41,11 @@ import { DetailsComponent } from './components/details/details.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
