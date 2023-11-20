@@ -8,6 +8,8 @@ import { Observable, map, tap } from 'rxjs';
 export class LocationService {
   private apiUrl = '../../assets/locations.json';
 
+  allLocations$ = this.http.get<any[]>(this.apiUrl);
+
   constructor(private http: HttpClient) {}
 
   getLocations(): Observable<any[]> {

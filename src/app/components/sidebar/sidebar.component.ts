@@ -8,14 +8,8 @@ import { LocationService } from 'src/app/services/location.service';
 })
 export class SidebarComponent {
 
-  list: any[] = [];
+  list$ = this.locationService.allLocations$;
   searchTerm: string = '';
 
   constructor(private locationService: LocationService) {}
-
-  ngOnInit(): void {
-    this.locationService.getLocations().subscribe(data => {
-      this.list = data;
-    });
-  }
 }

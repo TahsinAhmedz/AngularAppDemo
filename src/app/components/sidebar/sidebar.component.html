@@ -4,7 +4,7 @@
     <mat-nav-list role="list">
 
       <a mat-list-item routerLink="/home">Home</a>
-      <div *ngFor="let item of list">
+      <div *ngFor="let item of list$ | async">
         <a mat-list-item [routerLink]="'/details/' + item.slug">{{item.title}}</a>
 
         <div *ngIf="item.children">
