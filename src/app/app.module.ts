@@ -20,6 +20,7 @@ import {MatListModule} from '@angular/material/list';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DetailsComponent } from './components/details/details.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DetailsComponent } from './components/details/details.component';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
