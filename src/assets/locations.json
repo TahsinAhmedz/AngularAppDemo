@@ -4,23 +4,7 @@
     "title": "Introduction to JavaScript",
     "details": "JavaScript is a high-level, interpreted programming language. It is a versatile and widely-used language in web development. With its asynchronous capabilities, JavaScript allows for dynamic and interactive user interfaces.",
     "tags": ["javascript", "programming", "Basic"],
-    "slug": "introduction-to-javascript",
-    "children": [
-      {
-        "id": "1.1",
-        "title": "JavaScript Basics",
-        "details": "In this section, we cover the fundamental concepts of JavaScript. Topics include variables, data types, control flow, and basic functions.",
-        "tags": ["javascript", "programming", "Basic"],
-        "slug": "javascript-basics"
-      },
-      {
-        "id": "1.2",
-        "title": "Asynchronous JavaScript",
-        "details": "Learn about asynchronous programming in JavaScript. Explore concepts such as callbacks, promises, and async/await for managing asynchronous operations.",
-        "tags": ["javascript", "programming", "Asynchronous"],
-        "slug": "asynchronous-javascript"
-      }
-    ]
+    "slug": "introduction-to-javascript"
   },
   {
     "id": "2",
@@ -55,23 +39,7 @@
     "title": "Introduction to React.js",
     "details": "React.js is a JavaScript library for building user interfaces. It allows for the creation of reusable UI components and provides a virtual DOM for efficient rendering.",
     "tags": ["react.js", "javascript", "Basic"],
-    "slug": "introduction-to-react",
-    "children": [
-      {
-        "id": "6.1",
-        "title": "React Components",
-        "details": "Understanding the component-based architecture in React. Components are the building blocks of a React application, encapsulating both structure and behavior.",
-        "tags": ["react.js", "javascript", "Basic"],
-        "slug": "react-components"
-      },
-      {
-        "id": "6.2",
-        "title": "State and Props",
-        "details": "Explore the concepts of state and props in React. These mechanisms enable dynamic and interactive user interfaces by managing component data.",
-        "tags": ["react.js", "javascript", "Basic"],
-        "slug": "state-and-props"
-      }
-    ]
+    "slug": "introduction-to-react"
   },
   {
     "id": "7",
@@ -92,23 +60,7 @@
     "title": "Introduction to Angular",
     "details": "Angular is a front-end web framework developed by Google. It is built with TypeScript and supports the development of single-page applications with a modular architecture.",
     "tags": ["angular", "Basic"],
-    "slug": "introduction-to-angular",
-    "children": [
-      {
-        "id": "9.1",
-        "title": "Angular Components",
-        "details": "Learn about building components in Angular. Components are the basic building blocks of an Angular application, each encapsulating a specific functionality.",
-        "tags": ["angular", "Basic"],
-        "slug": "angular-components"
-      },
-      {
-        "id": "9.2",
-        "title": "Angular Services",
-        "details": "Explore the use of services in Angular. Services are reusable and injectable objects that provide shared functionality throughout an Angular application.",
-        "tags": ["angular", "Basic"],
-        "slug": "angular-services"
-      }
-    ]
+    "slug": "introduction-to-angular"
   },
   {
     "id": "10",
@@ -150,23 +102,7 @@
     "title": "Introduction to Vue.js",
     "details": "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed to be incrementally adoptable, making it easy to integrate with existing projects.",
     "tags": ["vue.js", "javascript", "web development"],
-    "slug": "introduction-to-vue",
-    "children": [
-      {
-        "id": "15.1",
-        "title": "Vue Components",
-        "details": "Understanding the component-based architecture in Vue.js. Components in Vue.js are reusable and self-contained units that can be composed to build complex user interfaces.",
-        "tags": ["vue.js", "javascript", "web development"],
-        "slug": "vue-components"
-      },
-      {
-        "id": "15.2",
-        "title": "Vue Router and State Management",
-        "details": "Explore Vue Router for navigation and Vuex for state management. These Vue.js features enable the creation of powerful and dynamic single-page applications.",
-        "tags": ["vue.js", "javascript", "web development"],
-        "slug": "vue-router-state-management"
-      }
-    ]
+    "slug": "introduction-to-vue"
   },
   {
     "id": "16",
@@ -215,23 +151,7 @@
     "title": "Game Development with Unity",
     "details": "Unity is a powerful game development engine used to create 2D and 3D games. This section explores the basics of Unity game development and the creation of interactive experiences.",
     "tags": ["unity", "game development"],
-    "slug": "game-development-unity",
-    "children": [
-      {
-        "id": "22.1",
-        "title": "Unity Scripting",
-        "details": "Learn scripting in Unity using C#. This scripting language is essential for creating interactive gameplay mechanics and controlling game objects in Unity.",
-        "tags": ["unity", "game development", "C#"],
-        "slug": "unity-scripting"
-      },
-      {
-        "id": "22.2",
-        "title": "Unity Physics and Animation",
-        "details": "Explore Unity's physics engine and animation system. Understand how to create realistic movements, collisions, and animations for game characters and objects.",
-        "tags": ["unity", "game development"],
-        "slug": "unity-physics-animation"
-      }
-    ]
+    "slug": "game-development-unity"
   },
   {
     "id": "23",
@@ -245,23 +165,7 @@
     "title": "Frontend Development with Angular",
     "details": "Angular is a powerful front-end framework for building dynamic and single-page web applications. This section covers advanced topics in Angular development.",
     "tags": ["angular", "web development"],
-    "slug": "frontend-development-angular",
-    "children": [
-      {
-        "id": "24.1",
-        "title": "Angular Directives",
-        "details": "Understand Angular directives for extending HTML with custom behavior. Directives are a powerful feature for creating reusable and modular components in Angular.",
-        "tags": ["angular", "web development"],
-        "slug": "angular-directives"
-      },
-      {
-        "id": "24.2",
-        "title": "Angular Forms and Validation",
-        "details": "Explore Angular forms and validation techniques. Effectively handle user input, perform form validation, and create responsive and interactive forms in Angular.",
-        "tags": ["angular", "web development"],
-        "slug": "angular-forms-validation"
-      }
-    ]
+    "slug": "frontend-development-angular"
   },
   {
     "id": "25",

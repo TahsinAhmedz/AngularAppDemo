@@ -1,0 +1,26 @@
+<mat-nav-list>
+  <ng-container *ngFor="let item of menuItems">
+    <mat-list-item>
+      <a matLine [routerLink]="item.children ? null : ['/details', item.slug]">
+        {{ item.title }}
+      </a>
+    </mat-list-item>
+    <app-nested-nav-list *ngIf="item.children" [menuItems]="item.children"></app-nested-nav-list>
+  </ng-container>
+</mat-nav-list>
+
+<!-- <mat-nav-list>
+  <ng-container *ngFor="let item of menuItems">
+    <mat-list-item>
+      <div class="menu-item" [class.collapsible]="item.children" (click)="toggleCollapse(item)">
+        <a matLine [routerLink]="item.children ? null : ['/details', item.slug]">
+          {{ item.title }}
+        </a>
+        <mat-icon *ngIf="item.children">{{ item.collapsed ? 'keyboard_arrow_right' : 'keyboard_arrow_down' }}</mat-icon>
+      </div>
+    </mat-list-item>
+    <div [@expandCollapse]="item.collapsed ? 'collapsed' : 'expanded'" class="nested-list">
+      <app-nested-nav-list *ngIf="item.children" [menuItems]="item.children"></app-nested-nav-list>
+    </div>
+  </ng-container>
+</mat-nav-list> -->

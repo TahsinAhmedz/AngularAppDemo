@@ -46,6 +46,7 @@ import { DetailsComponent } from './components/details/details.component';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
