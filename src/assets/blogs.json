@@ -1,4 +1,5 @@
-[
+{
+  "blogs": [
   {
     "id": "1",
     "title": "Introduction to JavaScript",
@@ -182,3 +183,4 @@
     "slug": "mobile-app-design-principles"
   }
 ]
+}

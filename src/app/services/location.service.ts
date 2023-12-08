@@ -1,27 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, filter, find, map, shareReplay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
-  private apiUrl = '../../assets/locations.json';
+  private apiUrl = 'http://localhost:3000/blogs';
 
-  allLocations$ = this.http.get<any[]>(this.apiUrl);
+  allLocations$ = this.http.get<any[]>(this.apiUrl).pipe(
+    // shareReplay(1)
+  );
 
   constructor(private http: HttpClient) {}
 
-  getLocations(): Observable<any[]> {
+  getBlogs(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  getObjectById(slug: string): Observable<any> {
-    console.log(slug);
+  getBlogById(slug: string): Observable<any> {
     return this.http.get<any[]>(this.apiUrl)
       .pipe(
+        // shareReplay(1),
         map(objects => objects.find(obj => obj.slug === slug)),
-        tap(x => console.log(slug, x))
+        tap(x => console.log(slug, x)),
       );
   }
 }

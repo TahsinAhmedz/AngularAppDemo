@@ -1,5 +1,5 @@
-<div *ngIf="objectData">
+<div *ngIf="blogData$ | async as blogData">
 
-  <h2>{{objectData.title}}</h2>
-  <p>{{ objectData.details}}</p>
+  <h2>{{blogData.title}}</h2>
+  <p>{{ blogData.details}}</p>
 </div>
