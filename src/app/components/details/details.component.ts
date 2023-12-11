@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+import { Blog } from 'src/app/models/blog.model';
 import { LocationService } from 'src/app/services/location.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { LocationService } from 'src/app/services/location.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit, OnDestroy{
-  blogData$!: Observable<any>;
+  blogData$!: Observable<Blog>;
 
   sub = new Subscription();
 
