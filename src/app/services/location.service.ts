@@ -15,11 +15,7 @@ export class LocationService {
 
   constructor(private http: HttpClient) {}
 
-  getBlogs(): Observable<Blog[]> {
-    return this.http.get<any[]>(this.apiUrl);
-  }
-
-  getBlogById(slug: string): Observable<Blog> {
+  getBlogById(slug: string | null): Observable<Blog> {
     return this.allLocations$
       .pipe(
         // shareReplay(1),

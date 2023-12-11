@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, switchMap, tap } from 'rxjs';
 import { Blog } from 'src/app/models/blog.model';
 import { LocationService } from 'src/app/services/location.service';
 
@@ -9,24 +9,16 @@ import { LocationService } from 'src/app/services/location.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent implements OnInit, OnDestroy{
+export class DetailsComponent implements OnInit{
   blogData$!: Observable<Blog>;
-
-  sub = new Subscription();
 
   constructor(private route: ActivatedRoute,
               private locationService: LocationService) {
   }
 
   ngOnInit(): void {
-    const sub1 = this.route.params.subscribe(params => {
-      this.blogData$ = this.locationService.getBlogById(params['slug']);
-    });
-
-    this.sub.add(sub1)
-  }
-
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    this.blogData$ = this.route.paramMap.pipe(
+      switchMap(params => this.locationService.getBlogById(params.get('slug')))
+    );
   }
 }
