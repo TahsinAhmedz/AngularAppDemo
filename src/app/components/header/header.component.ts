@@ -9,8 +9,6 @@ import { LocationService } from 'src/app/services/blog.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
-  blogs$ = this.locationService.allBlogs$;
   searchTerm: string = '';
 
   myControl = new FormControl('');
@@ -23,15 +21,10 @@ export class HeaderComponent {
       debounceTime(500),
       startWith(''),
       switchMap(value => {
-        const filterValue = value?.toLowerCase();
+        const filterValue = value!?.toLowerCase();
 
-        return this.blogs$.pipe(
-          map(blogs =>
-            blogs.filter(blog => blog.title.toLowerCase().includes(filterValue) || blog.details.toLowerCase().includes(filterValue))
-          )
-        );
+        return this.locationService.filterBySearch(filterValue)
       }),
-      // tap(x => console.log(x))
     );
   }
 

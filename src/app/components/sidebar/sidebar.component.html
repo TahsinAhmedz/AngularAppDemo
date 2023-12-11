@@ -7,9 +7,9 @@
       <div *ngFor="let item of list$ | async">
         <a mat-list-item [routerLink]="'/details/' + item.slug">{{item.title}}</a>
 
-        <div *ngIf="item.children">
+        <!-- <div *ngIf="item.children">
           <a mat-list-item *ngFor="let child of item.children" [routerLink]="'/details/' + item.slug + '/' + child.slug">{{child.title}}</a>
-        </div>
+        </div> -->
 
       </div>
       <a mat-list-item routerLink="/about">About</a>

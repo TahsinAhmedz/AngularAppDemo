@@ -16,11 +16,19 @@ export class LocationService {
   constructor(private http: HttpClient) {}
 
   getBlogById(slug: string | null): Observable<Blog> {
-    return this.allBlogs$
+    return this.http.get<any>(this.apiUrl + `?slug=${slug}`)
       .pipe(
         // shareReplay(1),
-        map(blogs => blogs.find(blog => blog.slug === slug)),
-        tap(x => console.log(slug, x)),
+        map(blogs => blogs.find((blog: { slug: string | null; }) => blog.slug === slug)),
+        // tap(x => console.log(slug, x)),
+      );
+  }
+
+  filterBySearch(searchTerm: string): Observable<Blog[]> {
+    return this.http.get<any>(this.apiUrl + `?q=${searchTerm}`)
+      .pipe(
+        // shareReplay(1),
+        // tap(x => console.log(searchTerm, x)),
       );
   }
 }
