@@ -19,10 +19,10 @@ export class LocationService {
   }
 
   getBlogById(slug: string): Observable<any> {
-    return this.http.get<any[]>(this.apiUrl)
+    return this.allLocations$
       .pipe(
         // shareReplay(1),
-        map(objects => objects.find(obj => obj.slug === slug)),
+        map(blogs => blogs.find(blog => blog.slug === slug)),
         tap(x => console.log(slug, x)),
       );
   }
