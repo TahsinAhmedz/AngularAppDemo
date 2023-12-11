@@ -21,6 +21,8 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DetailsComponent } from './components/details/details.component';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { BlogEffects } from './store/effects/blog.effects';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { StoreModule } from '@ngrx/store';
     MatAutocompleteModule,
     ReactiveFormsModule,
     MatListModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}),
+    EffectsModule.forFeature([BlogEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
