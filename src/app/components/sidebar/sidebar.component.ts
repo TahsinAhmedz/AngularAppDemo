@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LocationService } from 'src/app/services/location.service';
+import { LocationService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,7 +8,7 @@ import { LocationService } from 'src/app/services/location.service';
 })
 export class SidebarComponent {
 
-  list$ = this.locationService.allLocations$;
+  list$ = this.locationService.allBlogs$;
   searchTerm: string = '';
 
   constructor(private locationService: LocationService) {}

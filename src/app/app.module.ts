@@ -51,6 +51,7 @@ import { BlogEffects } from './store/effects/blog.effects';
     ReactiveFormsModule,
     MatListModule,
     StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     EffectsModule.forFeature([BlogEffects])
   ],
   providers: [],

@@ -9,14 +9,14 @@ import { Blog } from '../models/blog.model';
 export class LocationService {
   private apiUrl = 'http://localhost:3000/blogs';
 
-  allLocations$ = this.http.get<any[]>(this.apiUrl).pipe(
+  allBlogs$ = this.http.get<any[]>(this.apiUrl).pipe(
     // shareReplay(1)
   );
 
   constructor(private http: HttpClient) {}
 
   getBlogById(slug: string | null): Observable<Blog> {
-    return this.allLocations$
+    return this.allBlogs$
       .pipe(
         // shareReplay(1),
         map(blogs => blogs.find(blog => blog.slug === slug)),

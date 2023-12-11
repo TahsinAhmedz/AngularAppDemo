@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription, switchMap, tap } from 'rxjs';
 import { Blog } from 'src/app/models/blog.model';
-import { LocationService } from 'src/app/services/location.service';
+import { LocationService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-details',

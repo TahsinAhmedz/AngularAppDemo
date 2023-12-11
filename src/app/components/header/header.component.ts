@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, debounceTime, filter, map, startWith, switchMap, tap } from 'rxjs';
-import { LocationService } from 'src/app/services/location.service';
+import { LocationService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ import { LocationService } from 'src/app/services/location.service';
 })
 export class HeaderComponent {
 
-  locations$ = this.locationService.allLocations$;
+  blogs$ = this.locationService.allBlogs$;
   searchTerm: string = '';
 
   myControl = new FormControl('');
@@ -25,9 +25,9 @@ export class HeaderComponent {
       switchMap(value => {
         const filterValue = value?.toLowerCase();
 
-        return this.locations$.pipe(
-          map(locations =>
-            locations.filter(location => location.title.toLowerCase().includes(filterValue) || location.details.toLowerCase().includes(filterValue))
+        return this.blogs$.pipe(
+          map(blogs =>
+            blogs.filter(blog => blog.title.toLowerCase().includes(filterValue) || blog.details.toLowerCase().includes(filterValue))
           )
         );
       }),
