@@ -7,6 +7,11 @@ export const BlogActions = createActionGroup({
   source: 'Blog/API',
   events: {
     'Load Blogs': props<{ blogs: Blog[] }>(),
+    'Load Blogs Success': props<{ blogs: Blog[] }>(),
+    'Load Blogs Failure': props<{ error: string }>(),
+    'Load Blog By Id': props<{ slug: string }>(),
+    'Load Blog By Id Success': props<{ blog: Blog }>(),
+    'Load Blog By Id Failure': props<{ error: string }>(),
     'Add Blog': props<{ blog: Blog }>(),
     'Upsert Blog': props<{ blog: Blog }>(),
     'Add Blogs': props<{ blogs: Blog[] }>(),

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, debounceTime, filter, map, startWith, switchMap, tap } from 'rxjs';
-import { LocationService } from 'src/app/services/blog.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,7 @@ export class HeaderComponent {
   myControl = new FormControl('');
   filteredOptions$!: Observable<any[]>;
 
-  constructor(private locationService: LocationService) {}
+  constructor(private locationService: BlogService) {}
 
   ngOnInit(): void {
     this.filteredOptions$ = this.myControl.valueChanges.pipe(

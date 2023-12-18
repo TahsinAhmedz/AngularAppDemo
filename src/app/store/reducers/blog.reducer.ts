@@ -6,13 +6,15 @@ import { BlogActions } from '../actions/blog.actions';
 export const blogsFeatureKey = 'blogs';
 
 export interface State extends EntityState<Blog> {
-  // additional entities state properties
+  blogs: Blog[];
+  selectedBlog: Blog | null;
 }
 
 export const adapter: EntityAdapter<Blog> = createEntityAdapter<Blog>();
 
 export const initialState: State = adapter.getInitialState({
-  // additional entity state properties
+  blogs: [],
+  selectedBlog: null
 });
 
 export const reducer = createReducer(
@@ -43,6 +45,9 @@ export const reducer = createReducer(
   ),
   on(BlogActions.loadBlogs,
     (state, action) => adapter.setAll(action.blogs, state)
+  ),
+  on(BlogActions.loadBlogById,
+    (state, action) => adapter.addOne({slug: action.slug, ...action.slug}, state)
   ),
   on(BlogActions.clearBlogs,
     state => adapter.removeAll(state)

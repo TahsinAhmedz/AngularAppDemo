@@ -6,7 +6,7 @@ import { Blog } from '../models/blog.model';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationService {
+export class BlogService {
   private apiUrl = 'http://localhost:3000/blogs';
 
   allBlogs$ = this.http.get<any[]>(this.apiUrl).pipe(
